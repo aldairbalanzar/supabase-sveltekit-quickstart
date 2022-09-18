@@ -11,7 +11,7 @@
   
     const dispatch = createEventDispatcher()
   
-    function downloadImage() {
+    function downloadImage(node: any) {
         if(path) {
             supabase.storage
             .from('avatars')
