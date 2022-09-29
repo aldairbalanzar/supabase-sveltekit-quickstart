@@ -1,6 +1,6 @@
 <script lang="ts">
     import { supabase } from './supabaseClient'
-    import { user } from './sessionStore'
+    import { currentUser } from './sessionStore'
     import Avatar from './Avatar.svelte'
 	  import Auth from './Auth.svelte';
   
@@ -81,7 +81,7 @@
     <Avatar bind:path="{avatar_url}" on:upload="{updateProfile}" />
     <div>
       <label for="email">Email</label>
-      <input id="email" type="text" value="{$user.email}" disabled />
+      <input id="email" type="text" value="{$currentUser.email}" disabled />
     </div>
     <div>
       <label for="username">Name</label>

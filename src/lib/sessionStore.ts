@@ -1,5 +1,10 @@
-import { writable } from 'svelte/store'
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { writable, type Writable } from 'svelte/store';
 
-export const user: any | null = writable({
+interface IcurrentUser {
+    email: string;
+}
+
+export const currentUser: Writable<any> = writable({
     email: "",
 })
